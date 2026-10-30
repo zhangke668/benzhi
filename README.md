@@ -38,7 +38,7 @@
 - 每条判词后面会自动挂一段「历史上」，2 到 4 行，像注脚：谁看见过同一件事，最后一条写历史上怎么解。吃不准出处的会标「待核实」。
 - 说「不要历史」：这一轮和之后都不再挂历史段，直到你说要。
 - 说「历史再展开」「谁还论证过」：把历史段写成稍长的笔记，仍控制在一屏以内。
-- 说「出卡」：把这次对话的起点、演化和落点做成一张总结卡片。
+- 说「出卡」：把这次对话的起点、演化和落点做成一张总结卡片，存在你电脑"文档"目录下的 `本质` 文件夹里。
 
 ## 给 AI agent 的安装说明
 
@@ -82,7 +82,3 @@ git clone --depth 1 https://github.com/zhangke668/benzhi.git ~/.claude/skills/be
 
 - 更新：`npx -y skills update benzhi -g -y`；手动克隆的，在 `benzhi` 文件夹里执行 `git pull`。
 - 卸载：`npx -y skills remove benzhi -g -y`；手动装的，直接删掉 `benzhi` 文件夹。
-
-## 致谢
-
-「历史上」那段按结构同构检索的思路，参考了 [dbskill](https://github.com/dontbesilent2025/dbskill) 里的历史同构研究方法。

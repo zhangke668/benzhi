@@ -179,8 +179,12 @@ description: >-
 
 做法：
 1. 以 `<本质目录>/assets/card-template.html` 为模板（`<本质目录>` 是本 SKILL.md 所在目录），替换起点、演化、落点和日期，保留样式。引号用中文引号“”。
-2. 存到 `/home/box/Documents/本质/card-YYYYMMDD[-序号].html`，用 `google-chrome --headless=new --no-sandbox --hide-scrollbars --force-device-scale-factor=2 --window-size=750,1400 --screenshot=...` 渲染，再把底部多余空白裁掉，得到同名 PNG。
-3. 把 PNG 作为附件发给用户，附一句说明演化是概括的。
+2. 存到用户"文档"目录下的 `本质` 文件夹，文件名 `card-YYYYMMDD[-序号].html`，文件夹不存在就新建：
+   - Windows：`C:\Users\<用户名>\Documents\本质\`。"文档"可能被 OneDrive 挪走了，以 PowerShell `[Environment]::GetFolderPath('MyDocuments')` 拿到的目录为准。
+   - Mac、Linux：`~/Documents/本质/`。
+   - 没有"文档"目录时，用 `~/本质/`。
+3. 用本机有的 Chromium 内核浏览器（Chrome、Edge、Chromium 都行，Windows 一般自带 Edge 的 `msedge.exe`）渲染：`<浏览器> --headless=new --no-sandbox --hide-scrollbars --force-device-scale-factor=2 --window-size=750,1400 --screenshot=<PNG 路径> <HTML 路径>`，再把底部多余空白裁掉，得到同名 PNG。找不到浏览器就跳过这一步，只交 HTML；裁不了空白就交原图。
+4. 能发附件就把 PNG 作为附件发给用户，不能就告诉用户文件存在哪。附一句说明演化是概括的。
 
 ## 规矩
 
